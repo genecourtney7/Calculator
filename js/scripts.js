@@ -1,21 +1,24 @@
-function  saySomething (whatToSay) {
-    window.alert (whatToSay);
+//business  logic
+function add(number1, number2) {
+    return  number1 + number2;
 }
-
-function add (number1,  number2){
-    return number1 + number2;
+function subtract(number1, number2) {
+    return number1 - number2;
 }
-
-const result = add(3, 5);
-const outputText = "The sum is " + result + ".";
-
-//business logic
-function add (number1, number2)  {
-    return number1  + number2;
+function multiply(number1, number2) {
+    return number1 * number2;
+}
+function divide(number1, number2) {
+    return  number1 / number2;
 }
 
 //user interface logic
-const number1 = parseInt(prompt("Enter a Number:"));
+const number1 = parseInt(prompt("Enter a number:"));
 const number2 = parseInt(prompt("Enter another number:"));
-
-window.alert(add(number1, number2));
+const message = "Addition" + add(number1, number2) + "\n" + 
+                "Subtraction: " + subtract(number1, number2) + "\n" +
+                "Multiplication: " + multiply(number1, number2) + "\n" +
+                "Division: " + subtract (number1, number2) + "\n";
+                          
+window.alert(message);
+   
